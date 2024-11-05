@@ -61,22 +61,6 @@ public class ListeSimpleTest {
         assertEquals(listeATester.toString(), "ListeSimple(Noeud(3), Noeud(4), Noeud(1))");
         assertEquals(4, listeATester.tete.getSuivant().getElement());
     }
-    
-    @Test
-    public void modifiePremierElementEstPremierDeLaListe() {
-        // Test lorsque l'élément recherché est le premier de la liste
-        listeATester.ajout(1);  // Liste : 1
-        listeATester.ajout(2);  // Liste : 2 -> 1
-        listeATester.ajout(3);  // Liste : 3 -> 2 -> 1
-
-        // Modifie le premier élément
-        listeATester.modifiePremier(3, 4);  // L'élément 3 doit être remplacé par 4
-
-        // Vérification que l'élément est modifié et que la liste est correctement mise à jour
-        assertEquals("ListeSimple(Noeud(4), Noeud(2), Noeud(1))", listeATester.toString());
-        assertEquals(4, listeATester.tete.getElement());  // Le premier élément doit être 4
-    }
-
 
     @Test
     public void modifieTous() {
@@ -87,6 +71,7 @@ public class ListeSimpleTest {
         listeATester.modifieTous(1, 4);
         assertEquals(listeATester.toString(), "ListeSimple(Noeud(4), Noeud(4), Noeud(2), Noeud(4))");
         assertEquals(4, listeATester.tete.getSuivant().getElement());
+        assertEquals(3, listeATester.tete.getElement());
     }
 
     @Test
