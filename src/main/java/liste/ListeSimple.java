@@ -15,10 +15,14 @@ public class ListeSimple {
 
     public void modifiePremier(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
-        while (courant != null && courant.getElement() != element)
-            courant = courant.getSuivant();
-        if (courant != null)
-            courant.setElement(nouvelleValeur);
+        if (courant.getElement() == element) {
+        	courant.setElement(nouvelleValeur);
+        } else {
+	        while (courant != null && courant.getElement() != element)
+	            courant = courant.getSuivant();
+	        if (courant != null)
+	            courant.setElement(nouvelleValeur);
+	    }
     }
 
     public void modifieTous(Object element, Object nouvelleValeur) {
