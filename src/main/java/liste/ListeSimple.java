@@ -26,6 +26,11 @@ public class ListeSimple {
             courant.setElement(nouvelleValeur);
     }
 
+    /**
+    * modifie tout element trouver
+    * @param element un Noeud
+    * @param nouvelleValeur la valeur du noeud
+    */
     public void modifieTous(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
         while (courant != null) {
@@ -35,6 +40,10 @@ public class ListeSimple {
         }
     }
 
+    /**
+    * renvoie une chaine de caractere pour modeliser la liste
+    * @return String une chaine de caractere
+    */
     public String toString() {
         StringBuilder sb = new StringBuilder("ListeSimple(");
         Noeud n = tete;
@@ -48,6 +57,10 @@ public class ListeSimple {
         return sb.toString();
     }
 
+    /**
+    * supprime le premier element trouver
+    * @param element un Noeud
+    */
     public void supprimePremier(Object element) {
         if (tete != null) {
             if (tete.getElement() == element) {
@@ -68,6 +81,10 @@ public class ListeSimple {
         }
     }
 
+    /**
+     * supprime tout les elements trouver
+     * @param element un Noeud
+     */
     public void supprimeTous(int element) {
        tete = supprimeTousRecurs(element, tete);
     }
@@ -122,6 +139,11 @@ public class ListeSimple {
         return precedent;
     }
 
+    /**
+     * echange le noeud r1 par r2
+     * @param r1 un Noeud
+     * @param r2 un Noeud
+     */
     public void echanger(Noeud r1, Noeud r2) {
         if (r1 == r2)
             return;
