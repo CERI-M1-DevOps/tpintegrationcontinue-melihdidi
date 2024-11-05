@@ -15,4 +15,4 @@ jobs:
           distribution: 'corretto'
           java-version: '21'
       - name: envoie_des_taches
-        run: mvn –B package
+        run: mvn -B package
