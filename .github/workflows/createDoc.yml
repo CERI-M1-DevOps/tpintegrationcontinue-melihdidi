@@ -1,6 +1,5 @@
 name: create Doc
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 on: # Ce workflow se déclenche sur un pull request dans le dépôt
   pull_request:
     types:
