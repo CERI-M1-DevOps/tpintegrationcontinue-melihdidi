@@ -1,7 +1,7 @@
 name: Java CI with Maven - Test and package
 env:
   SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-on: [pull_request] # Ce workflow se déclenche sur un push dans le dépôt
+on: [pull_request] # Ce workflow se déclenche sur un pull request dans le dépôt
 
 jobs:
   TestAndPackage: # Nom du job : Test and package

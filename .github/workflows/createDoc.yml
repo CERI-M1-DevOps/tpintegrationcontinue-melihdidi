@@ -1,0 +1,22 @@
+name: create Doc
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+on: # Ce workflow se déclenche sur un pull request dans le dépôt
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  if_merged:
+    if: github.event.pull_request.merged == true
+    createDoc: # Nom du job : creation de documentation
+      name: Test and package
+      runs-on: ubuntu-latest # OS où s'exécute le job
+      steps:
+        - name: creer doc
+          run: mvn -B javadoc::javadoc
+        - name: gh-pages@v4 #déployer la documentation
+          uses: peaceiris/actions-gh-pages@v4
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./public

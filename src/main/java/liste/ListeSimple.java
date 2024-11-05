@@ -13,6 +13,12 @@ public class ListeSimple {
         size++;
     }
 
+    /**
+    * modifie le premier element trouver
+    * @param Object element un Noeud
+    * @param Object nouvelleValeur la valeur du noeud
+    * @return rien. change l'element si trouver
+    */
     public void modifiePremier(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
         while (courant != null && courant.getElement() != element)
