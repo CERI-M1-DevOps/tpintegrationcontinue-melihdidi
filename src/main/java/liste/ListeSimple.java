@@ -15,9 +15,8 @@ public class ListeSimple {
 
     /**
     * modifie le premier element trouver
-    * @param Object element un Noeud
-    * @param Object nouvelleValeur la valeur du noeud
-    * @return rien. change l'element si trouver
+    * @param element un Noeud
+    * @param nouvelleValeur la valeur du noeud
     */
     public void modifiePremier(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
