@@ -1,6 +1,5 @@
 name: create Doc
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 on: # Ce workflow se déclenche sur un pull request dans le dépôt
   pull_request:
     types:
@@ -24,5 +23,5 @@ jobs:
       - name: gh-pages@v4 #déployer la documentation
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public   
+          github_token: ${{ secrets.doc }}
+          publish_dir: ./target/reports/apidocs 
